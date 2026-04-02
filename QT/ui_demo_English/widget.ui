@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>850</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Smart Warehouse Monitoring System</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+}
+
+QTabWidget::pane {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: white;
+    margin-top: 5px;
+}
+
+QTabBar::tab {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 10px 20px;
+    margin-right: 2px;
+    font-weight: bold;
+    color: #495057;
+    font-size: 14px; /* Increased by 2 */
+}
+
+QTabBar::tab:selected {
+    background-color: white;
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+}
+
+QTabBar::tab:hover {
+    background-color: #dee2e6;
+}
+
+QGroupBox {
+    font-weight: bold;
+    font-size: 18px; /* Increased by 2 */
+    color: #212529;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    margin-top: 15px;
+    padding-top: 12px;
+    background-color: white;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 15px;
+    padding: 0 10px 0 10px;
+    background-color: white;
+}
+
+QPushButton {
+    font-weight: bold;
+    font-size: 17px; /* Increased by 2 */
+    border-radius: 6px;
+    padding: 12px 5px;
+    min-height: 50px;
+    border: none;
+    margin: 8px;
+}
+
+QPushButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+QPushButton:pressed {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+QLabel {
+    font-size: 17px; /* Increased by 2 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+}
+
+QStatusBar {
+    background-color: #343a40;
+    color: white;
+    font-size: 18px; /* Increased by 2 */
+    padding: 12px;
+    border-top: 2px solid #007bff;
+}
+
+QLineEdit {
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px; /* Increased by 2 */
+    margin: 4px;
+}
+
+QLineEdit:focus {
+    border-color: #007bff;
+    outline: none;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_title">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700; color:#007bff;&quot;&gt;🏭 Smart Warehouse Monitoring System&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tab_warehouse1">
+      <attribute name="title">
+       <string>🏠 Warehouse 1</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="groupBox_control1">
+         <property name="title">
+          <string>Device Control</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_control1">
+          <item>
+           <spacer name="horizontalSpacer_left1">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnLamp1">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>94</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #ffc107, stop:1 #e0a800);
+    color: white;
+    border: 2px solid #d39e00;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>💡 Light: OFF</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnFan1">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>94</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #17a2b8, stop:1 #138496);
+    color: white;
+    border: 2px solid #117a8b;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>🌀 Fan: OFF</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnBuzzer1">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>94</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #dc3545, stop:1 #c82333);
+    color: white;
+    border: 2px solid #bd2130;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>🔔 Buzzer: OFF</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnAutoMode1">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>94</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #28a745, stop:1 #218838);
+    color: white;
+    border: 2px solid #1e7e34;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>🤖 Auto Mode: Off</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_right1">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_threshold1">
+         <property name="title">
+          <string>Threshold Settings</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_threshold1">
+          <property name="horizontalSpacing">
+           <number>15</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>10</number>
+          </property>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="editLightMin1">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px; /* Increased by 2 */
+    margin: 4px;
+}</string>
+            </property>
+            <property name="text">
+             <string>100</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_4">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font-size: 17px; /* Increased by 2 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+    background: transparent;
+    color: #212529;
+}</string>
+            </property>
+            <property name="text">
+             <string>Humidity Min (%):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font-size: 17px; /* Increased by 2 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+    background: transparent;
+    color: #212529;
+}</string>
+            </property>
+            <property name="text">
+             <string>💧 Humidity Max (%):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="editLightMax1">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px; /* Increased by 2 */
+    margin: 4px;
+}</string>
+            </property>
+            <property name="text">
+             <string>800</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="editHumidityMax1">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px; /* Increased by 2 */
+    margin: 4px;
+}</string>
+            </property>
+            <property name="text">
+             <string>70</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_6">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font-size: 17px; /* Increased by 2 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+    background: transparent;
+    color: #212529;
+}</string>
+            </property>
+            <property name="text">
+             <string>Light Min (lux):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="editHumidityMin1">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px; /* Increased by 2 */
+    margin: 4px;
+}</string>
+            </property>
+            <property name="text">
+             <string>40</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font-size: 17px; /* Increased by 2 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+    background: transparent;
+    color: #212529;
+}</string>
+            </property>
+            <property name="text">
+             <string>☀️ Light Max (lux):</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_status1">
+         <property name="title">
+          <string>Environmental Data</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_status1">
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>15</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelTemp1">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #dc3545, stop:1 #c82333);
+    color: white;
+    border-left: 5px solid #bd2130;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>🌡️ Temperature: --°C</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="labelHumidity1">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #007bff, stop:1 #0069d9);
+    color: white;
+    border-left: 5px solid #0056b3;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>💧 Humidity: --%</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelLight1">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #ffc107, stop:1 #e0a800);
+    color: white;
+    border-left: 5px solid #d39e00;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>☀️ Light: -- lux</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="labelConnect1">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #28a745, stop:1 #218838);
+    color: white;
+    border-left: 5px solid #1e7e34;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>📡 Connection: Online</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_1">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_warehouse2">
+      <attribute name="title">
+       <string>🏢 Warehouse 2</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="groupBox_control2">
+         <property name="title">
+          <string>Device Control</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_control2">
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>15</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="btnLamp2">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>94</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #ffc107, stop:1 #e0a800);
+    color: white;
+    border: 2px solid #d39e00;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>💡 Light: OFF</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="btnFan2">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>94</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #17a2b8, stop:1 #138496);
+    color: white;
+    border: 2px solid #117a8b;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>🌀 Fan: OFF</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="btnAutoMode2">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>94</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #28a745, stop:1 #218838);
+    color: white;
+    border: 2px solid #1e7e34;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>🤖 Auto Mode: Off</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="btnMotor2">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>94</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #6c757d, stop:1 #5a6268);
+    color: white;
+    border: 2px solid #545b62;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>⚙️ Motor: OFF</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="btnBuzzer2">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>94</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #dc3545, stop:1 #c82333);
+    color: white;
+    border: 2px solid #bd2130;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>🔔 Buzzer: OFF</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_threshold2">
+         <property name="title">
+          <string>Threshold Settings</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_threshold2">
+          <property name="horizontalSpacing">
+           <number>15</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>10</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_10">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font-size: 17px; /* Increased by 2 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+    background: transparent;
+    color: #212529;
+}</string>
+            </property>
+            <property name="text">
+             <string>💧 Humidity Max (%):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="editHumidityMax2">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px; /* Increased by 2 */
+    margin: 4px;
+}</string>
+            </property>
+            <property name="text">
+             <string>70</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_11">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font-size: 17px; /* Increased by 2 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+    background: transparent;
+    color: #212529;
+}</string>
+            </property>
+            <property name="text">
+             <string>Humidity Min (%):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="editHumidityMin2">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px; /* Increased by 2 */
+    margin: 4px;
+}</string>
+            </property>
+            <property name="text">
+             <string>40</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_9">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font-size: 17px; /* Increased by 2 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+    background: transparent;
+    color: #212529;
+}</string>
+            </property>
+            <property name="text">
+             <string>🌫️ CO₂ Max (ppm):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="editCO2Max2">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px; /* Increased by 2 */
+    margin: 4px;
+}</string>
+            </property>
+            <property name="text">
+             <string>1000</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QLabel" name="label_12">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font-size: 17px; /* Increased by 2 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+    background: transparent;
+    color: #212529;
+}</string>
+            </property>
+            <property name="text">
+             <string>CO₂ Min (ppm):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QLineEdit" name="editCO2Min2">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px; /* Increased by 2 */
+    margin: 4px;
+}</string>
+            </property>
+            <property name="text">
+             <string>800</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_13">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font-size: 17px; /* Increased by 2 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+    background: transparent;
+    color: #212529;
+}</string>
+            </property>
+            <property name="text">
+             <string>☀️ Light Max (lux):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="editLightMax2">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px; /* Increased by 2 */
+    margin: 4px;
+}</string>
+            </property>
+            <property name="text">
+             <string>800</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_14">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    font-size: 17px; /* Increased by 2 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: bold;
+    background: transparent;
+    color: #212529;
+}</string>
+            </property>
+            <property name="text">
+             <string>Light Min (lux):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="editLightMin2">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px; /* Increased by 2 */
+    margin: 4px;
+}</string>
+            </property>
+            <property name="text">
+             <string>100</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_status2">
+         <property name="title">
+          <string>Environmental Data</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_status2">
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>15</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelTemp2">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #dc3545, stop:1 #c82333);
+    color: white;
+    border-left: 5px solid #bd2130;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>🌡️ Temperature: 17°C</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="labelHumidity2">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #007bff, stop:1 #0069d9);
+    color: white;
+    border-left: 5px solid #0056b3;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>💧 Humidity: 69%</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="labelCO2_2">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #28a745, stop:1 #218838);
+    color: white;
+    border-left: 5px solid #1e7e34;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>🌫️ CO₂: 524 ppm</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelLight2">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #ffc107, stop:1 #e0a800);
+    color: white;
+    border-left: 5px solid #d39e00;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>☀️ Light: 572 lux</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="labelTTL2">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #6f42c1, stop:1 #5a3d9c);
+    color: white;
+    border-left: 5px solid #4a2f7a;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>⚡ Dangerous Goods: ON</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="labelConnect2">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #28a745, stop:1 #218838);
+    color: white;
+    border-left: 5px solid #1e7e34;
+    font-size: 17px; /* Increased by 2 */
+}</string>
+            </property>
+            <property name="text">
+             <string>📡 Connection: Online</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStatusBar" name="statusBar"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
